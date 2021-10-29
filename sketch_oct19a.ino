@@ -17,11 +17,11 @@ BearSSL::X509List certificate(telegram_cert);
 AsyncTelegram2 LampuDIFF_Bot(client);
 
 //Setup Wifi Modul
-const char* APssid = "MandauNodeMCU";
-const char* APpassword = "12345678";
-const char* ssid = "Rumah Mandau Ext";
-const char* password = "wifigreget12";
-const char* token = "2053623184:AAGehCAiKXI_njYnySZw8p6uS0I9-TGv6ZI";
+const char* APssid = "changethis";
+const char* APpassword = "changethis";
+const char* ssid = "changethis";
+const char* password = "changethis";
+const char* token = "changethis";
 
 int relayPin = 15;
 int tombolPin = 4;
