@@ -81,7 +81,7 @@ void setup(void){
   replyKBTele.addButton("LED Off");
   replyKBTele.addButton("LED Status");
   replyKBTele.addRow();
-  replyKBTele.addButton("Hide");
+  replyKBTele.addButton("/hide");
   replyKBTele.enableResize();
   
   pinMode(relayPin, OUTPUT);
@@ -125,7 +125,7 @@ void loop(void){
           LampuDIFF_Bot.sendMessage(msg, "Pilih Tindakan :", replyKBTele);
           statusKB = true;
         }else if (statusKB){
-          if(msgText.equalsIgnoreCase("/action")){
+          if(msgText.equalsIgnoreCase("/hide")){
             LampuDIFF_Bot.removeReplyKeyboard(msg, "Menutup Reply Keyboard.");
             statusKB = false;
           }else{
