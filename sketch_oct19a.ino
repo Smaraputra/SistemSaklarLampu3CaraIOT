@@ -17,11 +17,11 @@ BearSSL::X509List certificate(telegram_cert);
 AsyncTelegram2 LampuDIFF_Bot(client);
 
 //Setup Wifi Modul
-const char* APssid = "MandauNodeMCU";
-const char* APpassword = "12345678";
-const char* ssid = "Rumah Mandau Ext";
-const char* password = "wifigreget12";
-const char* token = "2053623184:AAGehCAiKXI_njYnySZw8p6uS0I9-TGv6ZI";
+const char* APssid = "changethis";
+const char* APpassword = "changethis";
+const char* ssid = "changethis";
+const char* password = "changethis";
+const char* token = "changethis";
 
 int relayPin = 15;
 int tombolPin = 4;
@@ -81,7 +81,7 @@ void setup(void){
   replyKBTele.addButton("LED Off");
   replyKBTele.addButton("LED Status");
   replyKBTele.addRow();
-  replyKBTele.addButton("Hide");
+  replyKBTele.addButton("/hide");
   replyKBTele.enableResize();
   
   pinMode(relayPin, OUTPUT);
@@ -125,7 +125,7 @@ void loop(void){
           LampuDIFF_Bot.sendMessage(msg, "Pilih Tindakan :", replyKBTele);
           statusKB = true;
         }else if (statusKB){
-          if(msgText.equalsIgnoreCase("Hide")){
+          if(msgText.equalsIgnoreCase("/hide")){
             LampuDIFF_Bot.removeReplyKeyboard(msg, "Menutup Reply Keyboard.");
             statusKB = false;
           }else{
