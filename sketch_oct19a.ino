@@ -125,7 +125,7 @@ void loop(void){
           LampuDIFF_Bot.sendMessage(msg, "Pilih Tindakan :", replyKBTele);
           statusKB = true;
         }else if (statusKB){
-          if(msgText.equalsIgnoreCase("/action")){
+          if(msgText.equalsIgnoreCase("Hide")){
             LampuDIFF_Bot.removeReplyKeyboard(msg, "Menutup Reply Keyboard.");
             statusKB = false;
           }else{
